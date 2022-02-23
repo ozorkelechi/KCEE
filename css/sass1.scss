@@ -1,0 +1,48 @@
+$colors: (
+    one: chocolate,
+    two: black,
+    thrid: brown,
+    fourth: rgb(9, 255, 0)
+);
+
+$families:(
+    fine: Arial,
+    rugged: 'Times New Roman'
+);
+// Function
+@function mycolors($smart){
+    @return map-get($families, $smart);
+}
+@function myfonts($sure){
+    @return map-get($families,$sure);
+}
+
+// stylesss//////////////////////////////////////////////////////////////////////
+body{
+    
+    background-color: map-get($colors,fourth);
+}
+.wrapper{
+    background-color: map-get($colors, two);
+
+    h1{
+        color:map-get($colors, fourth);
+        
+
+        span{
+            color: map-get($colors, fourth);
+        }
+    }
+    p{
+        color: map-get($colors, thrid);
+    
+    }
+}
+
+// mixins
+$mobile: 640px;
+@mixin mobile {
+    @media (max-width:#{$mobile}){
+        @content;
+    }
+}

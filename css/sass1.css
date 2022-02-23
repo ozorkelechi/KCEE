@@ -1,0 +1,20 @@
+body {
+  background-color: #09ff00;
+}
+
+.wrapper {
+  background-color: black;
+}
+
+.wrapper h1 {
+  color: #09ff00;
+}
+
+.wrapper h1 span {
+  color: #09ff00;
+}
+
+.wrapper p {
+  color: brown;
+}
+/*# sourceMappingURL=sass1.css.map */
